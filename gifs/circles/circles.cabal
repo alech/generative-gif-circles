@@ -22,3 +22,13 @@ executable circles
                     ,  diagrams-lib
                     ,  colour
                     ,  diagrams-rasterific
+
+executable circles2
+  hs-source-dirs:      src
+  main-is:             Circles2.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                    ,  diagrams
+                    ,  diagrams-lib
+                    ,  colour
+                    ,  diagrams-rasterific
