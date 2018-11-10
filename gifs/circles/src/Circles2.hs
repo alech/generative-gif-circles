@@ -19,8 +19,8 @@ coloredCircles i =
 main :: IO ()
 main = 
     animatedGif "circles2.gif"
-                (mkSizeSpec2D (Just 400.0 :: Maybe Double)
-                              (Just 400.0 :: Maybe Double))
+                (mkSizeSpec2D (Just 560.0 :: Maybe Double)
+                              (Just 560.0 :: Maybe Double))
                 LoopingNever
                 1
                 (coloredCircles <$> [0,4..390])
