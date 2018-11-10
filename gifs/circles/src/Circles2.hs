@@ -10,9 +10,9 @@ coloredCircles i =
     (position circles # lw thin) `atop` (circle 2 # lc white) # bgFrame 0.1 white
     where
         colors = 
-            [sRGB 0.024 0.522 0.529,
-             sRGB 0.067 0.184 0.255,
-             sRGB 0.31 0.725 0.624]
+            [sRGB 0.02 0.27 0.58,
+             sRGB 0.00 0.07 0.29,
+             sRGB 0.84 0.00 0.04]
         circles = [(p2 (cos(fromIntegral x/10), sin(fromIntegral x/10)),
                     circle 1 # lc (colors !! (x `mod` 3)))  | x <- [0..i]]
 
@@ -21,6 +21,6 @@ main =
     animatedGif "circles2.gif"
                 (mkSizeSpec2D (Just 560.0 :: Maybe Double)
                               (Just 560.0 :: Maybe Double))
-                LoopingNever
-                1
-                (coloredCircles <$> [0,4..390])
+                LoopingForever
+                20
+                (coloredCircles <$> [62,62,62] ++ [62,126..15*62] ++ reverse [62,126..15*62])
